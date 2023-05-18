@@ -20,9 +20,13 @@
 		<!-- Projektin merkistökoodaus -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<sqlite.driver.version>3.41.2.1</sqlite.driver.version>
+		<jstl.api.version>1.2</jstl.api.version>
 	</properties>
 
 	<dependencies>
+
 		<!-- Web-palvelin (Tomcat): -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -60,6 +64,18 @@
 			<artifactId>junit-jupiter</artifactId>
 			<version>${junit.jupiter.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- lisää nämä riippuvuudet (SQLite ja JSTL): -->
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>${sqlite.driver.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.api.version}</version>
 		</dependency>
 	</dependencies>
 
